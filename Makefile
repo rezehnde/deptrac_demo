@@ -14,4 +14,7 @@ dev-init:                                                                      #
 fixtures:                                                                      ## load fixtures
 	$(SYMFONY_CMD) hautelook:fixtures:load -n -vvv --no-bundles
 
-.PHONY: help dev-init fixtures
+deptrac:																	   ## run deptrac
+	php deptrac.phar
+
+.PHONY: help dev-init fixtures deptrac
