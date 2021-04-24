@@ -1,0 +1,11 @@
+App\Entity\Product:
+  product_1:
+    __construct: [ 1, '1984 - George Orwell', 691 ]
+  product_2:
+    __construct: [ 2, 'Neuromancer - William Gibson', 865 ]
+  product_3:
+    __construct: [ 3, 'A Knock at Midnight - Brittany K. Barnett', 1589 ]
+  product_4:
+    __construct: [ 4, 'Migrations - Charlotte McConaghy', 1335 ]
+  product_5:
+    __construct: [ 5, 'Blacktop Wasteland - S. A. Cosby', 1328 ]
