@@ -7,19 +7,27 @@ layers:
     collectors:
       - type: className
         regex: .*Controller.*
+  - name: Entity
+    collectors:
+      - type: directory
+        regex: src/Entity/.*
   - name: Repository
     collectors:
       - type: className
         regex: .*Repository.*
+      - type: implements
+        implements: 'ServiceEntityRepository'
   - name: Service
     collectors:
-      - type: className
-        regex: .*Service.*
+      - type: directory
+        regex: src/Service/.*
 ruleset:
   Controller:
+    - Entity
     - Service
     - Repository
-  Service:
+  Entity:
     - Repository
+  Service: ~
   Repository:
-    - Service
+    - Entity
