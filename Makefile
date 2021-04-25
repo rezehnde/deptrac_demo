@@ -17,4 +17,7 @@ fixtures:                                                                      #
 deptrac:																	   ## run deptrac
 	php deptrac.phar
 
-.PHONY: help dev-init fixtures deptrac
+cache-clear:                                                                   ## clear symfony cache
+	$(SYMFONY_CMD) cache:clear
+
+.PHONY: help dev-init fixtures deptrac cache-clear
