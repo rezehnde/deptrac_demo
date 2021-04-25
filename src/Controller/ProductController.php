@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use App\Repository\ProductRepository;
-use App\Service\ProductFormatter;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -13,7 +12,6 @@ final class ProductController
 {
     public function __construct(
         private ProductRepository $productRepository,
-        private ProductFormatter $productFormatter
     ) {
     }
 
@@ -25,8 +23,6 @@ final class ProductController
             static fn (Product $product) => $product->toArray(),
             $products
         );
-
-        $productsAsArray = $this->productFormatter->format($productsAsArray);
 
         return new Response(json_encode($productsAsArray), Response::HTTP_OK, [
             'Content-Type' => 'application/json',

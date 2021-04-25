@@ -24,7 +24,6 @@ layers:
 ruleset:
   Controller:
     - Entity
-    - Service
     - Repository
   Entity:
     - Repository
