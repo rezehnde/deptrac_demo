@@ -1,0 +1,12 @@
+on: [push, pull_request]
+name: Dependencies Validation
+jobs:
+  deptrac:
+    name: deptrac
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: deptrac
+      uses: docker://smoench/deptrac-action:latest
+      with:
+        args: analyse depfile.yaml
