@@ -28,4 +28,5 @@ ruleset:
   Entity:
     - Repository
   Service: ~
-  Repository: ~
+  Repository:
+    - Entity
